@@ -86,3 +86,5 @@ Therefore, we can use this model to predict patients' clearance rate based on th
  - Based on the model: For a 40-year-old, we expect the creatinine clearance rate should be, on average, 123.02 mL/minute; while for a 60-year-old, we expect the creatinine clearance rate should be, on average, 110.62 mL/minute. Therefore, the 40-year-old patient (135 mL/min) is 11.98 mL/minute (9.74%) above average, while the 60-year-old patient (112 mL/min) is 1.38 mL/minute (1.25%) above average. Because the clearance rate is the higher, the better, we can conclude that the 40-year-old patient is healther.
  <img width="309" alt="Screen Shot 2020-02-13 at 1 58 44 PM" src="https://user-images.githubusercontent.com/42823507/74473318-07f12c00-4e69-11ea-8949-b96347ac6251.png">
 
+
+## Green Buildings
