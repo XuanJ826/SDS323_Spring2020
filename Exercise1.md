@@ -103,8 +103,11 @@ Besides these four variables, we need to consider other 19 variables one by one 
  - leasing rate: there are some outliers in occupancy rate; thus, we need to remove these outliers in our analysis
  - stories: since we plan to build a 15 stories building, we can set the range from 10 to 19, which is the range between median and 75th percentile
  <img width="403" alt="Screen Shot 2020-02-13 at 5 15 05 PM" src="https://user-images.githubusercontent.com/42823507/74487166-6d064b00-4e84-11ea-9618-4dac56c3a1c7.png">
+ 
  - age: the age influence the rent in a negative way based on the plot, since our building is new, we can control it to be less than 34, which is the median building age in the data set.
+ 
  ![Rplot02](https://user-images.githubusercontent.com/42823507/74487286-b191e680-4e84-11ea-9cad-1ab5a26914c5.png)
+ 
  - renovated: we would not control this factor since we set the age to be lower than 34, which is comparatively new building
  - class a/class b: we would set the building to be either a or b class since it represents the average quality.
  - LEED/Energy star: since these two variables are categories of the green_rating, we would not control them in this case.
