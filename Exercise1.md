@@ -63,7 +63,7 @@ From the data, we can see that the average arrival delay time on September and N
 
 Therefore, we can conclude that the best month in a year to minimize the delays are September and November.
 
-In conclusion, from the analysis of both flights into and out of Austin above, we can conclude that the best day of a week to minimize the delays in a week are Wednesday and Saturday, while the best month of year are September and November. This can be useful information when booking the flight. However, the conclusion might be inaccurate since there might be some uncontrolled variables that might influence the final result. In addition, the data are based on 2008's domestic flight information, the result may vary in different year and for international flights.
+In conclusion, from the analysis of both flights into and out of Austin above, we can conclude that the best day of a week to minimize the delays in a week are Wednesday and Saturday, while the best month of year are September and November. This can be useful information when booking the flight. However, the conclusion might be inaccurate since there might be some uncontrolled variables that might influence the final result, and the small available sample size after filter may distort the final result. In addition, the data are based on 2008's domestic flight information, the result may vary in different year and for international flights.
 
 
 ## Regression practice
