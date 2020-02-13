@@ -123,3 +123,37 @@ After controlling all variables, we get the following dataset:
 <img width="1405" alt="Screen Shot 2020-02-13 at 5 28 56 PM" src="https://user-images.githubusercontent.com/42823507/74487917-5c56d480-4e86-11ea-8af0-32c1675cbc78.png">
 
 This data set shows us that it is not economic to invest in the green building because the average and median rent rates of green buildings are both lower than those of non-green buildings. Besides, the gas and electricity costs are the same. Therefore, in the long-run, it might earn higher profit by building a non-green building in consideration of high implementation cost with low revenue.
+
+
+## Milk prices
+
+From milk.csv, we can see there are two variables: price and sales quantity.
+In order to derive the function used to maxmize the profit, we need to set up some variables:
+ - N-net profit
+ - Q - sales quantity
+ - P - price per unit
+ - C - cost per unit
+
+Since the net profit is the total revenue minus total cost, we can get the equation: N = Q (P-C). 
+Meanwhile, we know that Q is determined by customer, while the P is determined by store.
+
+So the question is for what price the store should set to maximize the net profit. To get the result, we need first consider how Q and P is related. And the plot between two is shown below:
+
+![Rplot04](https://user-images.githubusercontent.com/42823507/74488514-084cef80-4e88-11ea-8a19-da507fb4657d.png)
+
+From the graph, we can see there is a negative relationship between Q and P, and the next step is to develop a fitted equation based on the data, which can be used by store to preditct quantity from price.
+
+Based on the power laws, we know that Q = KP^E, where K is a constant and E is price elasticity of demand(PED).
+To derive the value of K and E, we can use log-transformed linear regression model between Q and P:
+
+![Rplot05](https://user-images.githubusercontent.com/42823507/74488706-b22c7c00-4e88-11ea-9397-1eb718cb3bee.png)
+
+The equation is: log(Q) = 4.72 - 1.62log(P), and K = e^4.72 = 110, E = -1.62 based on the trick.
+
+<img width="380" alt="Screen Shot 2020-02-13 at 5 46 33 PM" src="https://user-images.githubusercontent.com/42823507/74488787-e738ce80-4e88-11ea-8d03-42cbee3db8ca.png">
+
+Therefore, we know that Q = 110*P^-1.62, AND N = (110*P^-1.62)(P-C). Using the calculus, we know that when P = 
+
+In the case when c=1, we can check the plot in R to know that the profit-maxmizing price is about 2.62
+
+![Rplot06](https://user-images.githubusercontent.com/42823507/74488992-8231a880-4e89-11ea-8729-90110083bc95.png)
