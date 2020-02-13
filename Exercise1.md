@@ -36,6 +36,7 @@ Besides these two variables, we need to consider other 15 variables on which var
 Best Day of the Week:
 
 For the flight out of Austin:
+ 
  <img width="271" alt="Screen Shot 2020-02-13 at 1 44 17 PM" src="https://user-images.githubusercontent.com/42823507/74472077-f3139900-4e66-11ea-9a07-e2a81cdc807b.png">
 
 From the data, we can see that the average departure delay time on Wednesday and Saturday are lowest. In addition, they also have the lowest standard deviation, which indicates the number has low fluctuation.
@@ -48,35 +49,14 @@ Therefore, we can conclude that the best day in a week to minimize the delays is
 Best Month of a Year:
 
 For the flight out of Austin:
-  Month  MEAN   MIN   MAX   SD
-   1     7.88   -20   345  28.4
-   2     9.70   -19   293  29.6
-   3     12.5   -22   413  35.2
-   4     7.18   -22   412  27.4
-   5     8.23   -21   347  26.0
-   6     10.8   -18   405  32.3
-   7     9.44   -20   475  32.8
-   8     8.96   -20   382  31.3
-   9   # 2.49   -17   272  19.0
-  10     3.58   -17   308  21.2
-  11   # 3.35   -15   292  20.3
-  12     14.6   -15   483  39.9
+
+<img width="243" alt="Screen Shot 2020-02-13 at 1 46 19 PM" src="https://user-images.githubusercontent.com/42823507/74472250-3d951580-4e67-11ea-9289-943fc7eae892.png">
+
 From the data, we can see that the average departure delay time on September and November are lowest. In addition, they also have the lowest standard deviation, which indicates the number has low fluctuation.
 
 For the flight into Austin:
- Month MEAN      MIN   MAX   SD
-  1     4.17     -39   339  29.3
-  2     6.04     -39   320  31.0
-  3     10.1     -58   414  36.5
-  4     5.37     -32   394  28.8
-  5     6.60     -40   378  28.2
-  6     9.34     -40   399  33.5
-  7     6.76     -33   465  33.7
-  8     6.18     -37   364  32.4
-  9  # -0.0788   -34   270  20.2
- 10    0.991     -33   310  22.5
- 11  # 0.0375    -43   263  22.0
- 12    11.8      -37   466  40.8
+
+<img width="264" alt="Screen Shot 2020-02-13 at 1 46 57 PM" src="https://user-images.githubusercontent.com/42823507/74472315-556c9980-4e67-11ea-8c24-08f258a7a0ea.png">
 
 From the data, we can see that the average arrival delay time on September and November are lowest. In addition, they also have the lowest standard deviation, which indicates the number has low fluctuation.
 
