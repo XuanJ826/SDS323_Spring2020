@@ -16,6 +16,7 @@ Besides these two variables, we need to consider other 15 variables on which var
  - UniqueCarrier/FlightNum/TailNum: In this analysis, we consider the delay time regardless of carrier information, so we ignore these three variables related to airline carrier.
  
  - ActualElapsedTime: The elapsed time is related to the air time, which may influence the delay time, so we will use the middle 50% of data which is the range between 57 and 164.
+    
     min Q1 median  Q3 max   mean      sd     n     missing
      22 57    125 164 506 120.1822 61.4858 97659    1601
  
@@ -26,6 +27,7 @@ Besides these two variables, we need to consider other 15 variables on which var
  - Origin/Dest: In this analysis, we only consider the relationship between time and delay time, so we would ignore the origin and destination factors.
  
  - Distance: Distance is another important factor that might influence the delay time, so we would control this factor to the middle 50% range which is between 190 and 1085.
+    
     min  Q1 median   Q3  max     mean     sd      n     missing
      66  190  775   1085 1770 705.0159 469.1021 99260       0
  
@@ -38,6 +40,7 @@ Besides these two variables, we need to consider other 15 variables on which var
 Best Day of the Week:
 
 For the flight out of Austin:
+ 
  DayOfWeek       MEAN   MIN   MAX   SD
  1               9.46   -19   442  31.2
  2               7.21   -20   413  29.4
@@ -46,6 +49,7 @@ For the flight out of Austin:
  5               10.6    -22   483  31.1
  6             # 6.46   -20   405  27.6
  7               9.53   -22   382  30.8
+
 From the data, we can see that the average departure delay time on Wednesday and Saturday are lowest. In addition, they also have the lowest standard deviation, which indicates the number has low fluctuation.
 
 For the flight into Austin:
