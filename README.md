@@ -8,20 +8,31 @@ Considering the flights into and out of Austin, I am interested in what is the b
 Besides these two variables, we need to consider other 15 variables on which variables to ignore and which variables to control:
 
  -Year all 2008: since the data are all from 2008, this variable can be ignored in this case.
+ 
  -DayOfMonth: we are analyzing the best month and day of week in this case, the day of month is unrelated since they are both time variable, so we can neglect this variable in this case
+ 
  -DepTime/CRSDepTime/ArrTime/CRSArrTime: These are data used to calculate the delay time for departure and arrival flights, so we can ignore them in this analysis.
+ 
  -UniqueCarrier/FlightNum/TailNum: In this analysis, we consider the delay time regardless of carrier information, so we ignore these three variables related to airline carrier.
+ 
  -ActualElapsedTime: The elapsed time is related to the air time, which may influence the delay time, so we will use the middle 50% of data which is the range between 57 and 164.
     min Q1 median  Q3 max   mean      sd     n     missing
      22 57    125 164 506 120.1822 61.4858 97659    1601
+ 
  -CRSElapsedTime: Since we have controlled the ActualElapsedTime, this variable will be ignored.
+ 
  -AirTime/TaxiIn/TaxiOut: Air time, taxi in and tax out time are all included in the elapsed time, so we would ignore all three variables.
+ 
  -Origin/Dest: In this analysis, we only consider the relationship between time and delay time, so we would ignore the origin and destination factors.
+ 
  -Distance: Distance is another important factor that might influence the delay time, so we would control this factor to the middle 50% range which is between 190 and 1085.
     min  Q1 median   Q3  max     mean     sd      n     missing
      66  190  775   1085 1770 705.0159 469.1021 99260       0
+ 
  -Cancelled: since the delay time is only related to scheduled flight, cancelled flight is not included. We need to filter the data to Cancelled==1 to clean the data.
+ 
  -Diverted: Diverted is a rare case, so we should control variable to Diverted==0, which only consider the case of flights that do not divert.
+ 
  -CarrierDelay/WeatherDelay/NASDelay/SecurityDelay/LateAircraftDelay:In this analysis, we don't consider the reason for delay, so these variables will be ignored.
 
 #Best Day of the Week:
@@ -35,7 +46,7 @@ For the flight out of Austin:
  5               10.6    -22   483  31.1
  6             ##6.46   -20   405  27.6
  7               9.53   -22   382  30.8
- From the data, we can see that the average departure delay time on Wednesday and Saturday are lowest. In addition, they also have the lowest standard deviation, which indicates the number has low fluctuation.
+From the data, we can see that the average departure delay time on Wednesday and Saturday are lowest. In addition, they also have the lowest standard deviation, which indicates the number has low fluctuation.
 
 For the flight into Austin:
  DayOfWeek MEAN   MIN   MAX   SD
@@ -46,7 +57,7 @@ For the flight into Austin:
  5         8.29   -37   466  32.0
  6       ##3.10   -43   399  29.5
  7         6.49   -37   362  31.8
- From the data, we can see that the average arrival delay time on Wednesday and Saturday are lowest. In addition, they also have the lowest standard deviation, which indicates the number has low fluctuation.
+From the data, we can see that the average arrival delay time on Wednesday and Saturday are lowest. In addition, they also have the lowest standard deviation, which indicates the number has low fluctuation.
 
 Therefore, we can conclude that the best day in a week to minimize the delays is Wednesday and Saturday.
 
@@ -93,3 +104,4 @@ In conclusion, from the analysis of both flights into and out of Austin above, w
 ## Regression practice
 
 In this case, the question we are considering is whether there is a relationship between patient's age and patient's creatine clearance rate. And whether we can develop a linear model based on the past data, which can be used in the future to predict patient's creatine clearance rate.
+
