@@ -77,3 +77,12 @@ From the plot, we can see there is a linear relationship between clearance rate 
 Based on the past data, R helps to develop the following fitted equation: clearance rate = 147.81 - 0.62 * age
 <img width="301" alt="Screen Shot 2020-02-13 at 1 52 05 PM" src="https://user-images.githubusercontent.com/42823507/74472773-125ef600-4e68-11ea-98f7-41c51d33502a.png">
 
+Therefore, we can use this model to predict patients' clearance rate based on their ages.
+ - For a 55-year-old, we expect the creatinine clearance rate should be, on average, 113.72 mL/minute.
+<img width="267" alt="Screen Shot 2020-02-13 at 1 55 53 PM" src="https://user-images.githubusercontent.com/42823507/74473059-94e7b580-4e68-11ea-976f-8f881b78291a.png">
+
+ - The model also indicates that we expected that the clearance rate will decrease, on average, 0.62 mL/minute, if the age increase by 1 year.
+ 
+ - Based on the model: For a 40-year-old, we expect the creatinine clearance rate should be, on average, 123.02 mL/minute; while for a 60-year-old, we expect the creatinine clearance rate should be, on average, 110.62 mL/minute. Therefore, the 40-year-old patient (135 mL/min) is 11.98 mL/minute (9.74%) above average, while the 60-year-old patient (112 mL/min) is 1.38 mL/minute (1.25%) above average. Because the clearance rate is the higher, the better, we can conclude that the 40-year-old patient is healther.
+ <img width="309" alt="Screen Shot 2020-02-13 at 1 58 44 PM" src="https://user-images.githubusercontent.com/42823507/74473318-07f12c00-4e69-11ea-8949-b96347ac6251.png">
+
