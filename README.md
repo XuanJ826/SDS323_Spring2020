@@ -91,3 +91,5 @@ In conclusion, from the analysis of both flights into and out of Austin above, w
 
 
 ## Regression practice
+
+In this case, the question we are considering is whether there is a relationship between patient's age and patient's creatine clearance rate. And whether we can develop a linear model based on the past data, which can be used in the future to predict patient's creatine clearance rate.
