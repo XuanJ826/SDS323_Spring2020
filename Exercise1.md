@@ -16,9 +16,7 @@ Besides these two variables, we need to consider other 15 variables on which var
  - UniqueCarrier/FlightNum/TailNum: In this analysis, we consider the delay time regardless of carrier information, so we ignore these three variables related to airline carrier.
  
  - ActualElapsedTime: The elapsed time is related to the air time, which may influence the delay time, so we will use the middle 50% of data which is the range between 57 and 164.
-    
-    min Q1 median  Q3 max   mean      sd     n     missing
-     22 57    125 164 506 120.1822 61.4858 97659    1601
+    <img width="406" alt="Screen Shot 2020-02-13 at 1 43 03 PM" src="https://user-images.githubusercontent.com/42823507/74471984-c8c1db80-4e66-11ea-8478-2a8461fc6aa3.png">
  
  - CRSElapsedTime: Since we have controlled the ActualElapsedTime, this variable will be ignored.
  
@@ -27,9 +25,7 @@ Besides these two variables, we need to consider other 15 variables on which var
  - Origin/Dest: In this analysis, we only consider the relationship between time and delay time, so we would ignore the origin and destination factors.
  
  - Distance: Distance is another important factor that might influence the delay time, so we would control this factor to the middle 50% range which is between 190 and 1085.
-    
-    min  Q1 median   Q3  max     mean     sd      n     missing
-     66  190  775   1085 1770 705.0159 469.1021 99260       0
+    <img width="440" alt="Screen Shot 2020-02-13 at 1 42 02 PM" src="https://user-images.githubusercontent.com/42823507/74471912-a4fe9580-4e66-11ea-9b0e-142f24bf4634.png">
  
  - Cancelled: since the delay time is only related to scheduled flight, cancelled flight is not included. We need to filter the data to Cancelled==1 to clean the data.
  
