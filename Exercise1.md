@@ -88,3 +88,33 @@ Therefore, we can use this model to predict patients' clearance rate based on th
 
 
 ## Green Buildings
+
+In this case, besides the recommendations from developer, there are many factors needed to be controled. Based on the data set in greenbuildings.csv, we can see that the data for green buildings is small compared to the data for non-green buildings.This may lead to biased conclustion from the analysis.
+![Rplot](https://user-images.githubusercontent.com/42823507/74485987-a093a600-4e81-11ea-921d-ed56a23b14e0.png)
+
+There are in total 23 variables from the data set. Rent, gas costs and electricity costs are three major dependent variables we need to analyze to see whether investing a green building is worthy in the long term. Green_rating is our independent variable that we used to compare the revenue and cost between green and non-green buildings.
+
+Besides these four variables, we need to consider other 19 variables one by one to see whether we need to control these variables in our analysis:
+ - CS. Property ID: this variable will be ignored since it is just a primary ID.
+ - cluster: this variable is an identifier for the building cluster, which is unrelated to our analysis.
+ - size: The size factor would not be controlled in this case because based on the graph, there is no relationship between size and rent.
+ ![Rplot01](https://user-images.githubusercontent.com/42823507/74486469-a2119e00-4e82-11ea-9f47-3985f968fb12.png)
+ - empl_gr: we will set it to be top 25% since the Austin's y-o-y employment growth rate ranks the 2nd in last year.
+ - leasing rate: there are some outliers in occupancy rate; thus, we need to remove these outliers in our analysis
+ - stories: since we plan to build a 15 stories building, we can set the range from 10 to 19, which is the range between median and 75th percentile
+ <img width="403" alt="Screen Shot 2020-02-13 at 5 15 05 PM" src="https://user-images.githubusercontent.com/42823507/74487166-6d064b00-4e84-11ea-9618-4dac56c3a1c7.png">
+ - age: the age influence the rent in a negative way based on the plot, since our building is new, we can control it to be less than 34, which is the median building age in the data set.
+ ![Rplot02](https://user-images.githubusercontent.com/42823507/74487286-b191e680-4e84-11ea-9cad-1ab5a26914c5.png)
+- renovated: we would not control this factor since we set the age to be lower than 34, which is comparatively new building
+- class a/class b: we would set the building to be either a or b class since it represents the average quality.
+- LEED/Energy star: since these two variables are categories of the green_rating, we would not control them in this case.
+- amenities: By looking at the map, the amenities is 1 in the planning region; thus, we control this as amenities == 1.
+- cd/hd/total.dd: we would not control these three factor in this case as they influence the rent in a neglected way.
+- Percipitation: we would control this to the middle 50% range based on the Austin's precipitation rate.
+- Cluster rent: regional rent rate has huge influence in the rent based on the plot, which positively influence the rent. Based on the East Austin(zip code:78702)'s median rent rate, it is included in top 25% of national median rent rate. Thus, we control it in the top25% range in this case. 
+![Rplot03](https://user-images.githubusercontent.com/42823507/74487727-e05c8c80-4e85-11ea-956f-e064f57e5bbd.png)
+
+After controlling all variables, we get the following dataset:
+<img width="1405" alt="Screen Shot 2020-02-13 at 5 28 56 PM" src="https://user-images.githubusercontent.com/42823507/74487917-5c56d480-4e86-11ea-8af0-32c1675cbc78.png">
+
+This data set shows us that it is not economic to invest in the green building because the average and median rent rates of green buildings are both lower than those of non-green buildings. Besides, the gas and electricity costs are the same. Therefore, in the long-run, it might earn higher profit by building a non-green building in consideration of high implementation cost with low revenue.
