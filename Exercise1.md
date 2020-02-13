@@ -35,7 +35,7 @@ Besides these two variables, we need to consider other 15 variables on which var
  
  - CarrierDelay/WeatherDelay/NASDelay/SecurityDelay/LateAircraftDelay:In this analysis, we don't consider the reason for delay, so these variables will be ignored.
 
-# Best Day of the Week:
+Best Day of the Week:
 
 For the flight out of Austin:
  DayOfWeek       MEAN   MIN   MAX   SD
@@ -61,7 +61,7 @@ From the data, we can see that the average arrival delay time on Wednesday and S
 
 Therefore, we can conclude that the best day in a week to minimize the delays is Wednesday and Saturday.
 
-# Best Month of a Year:
+Best Month of a Year:
 
 For the flight out of Austin:
   Month  MEAN   MIN   MAX   SD
