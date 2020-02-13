@@ -109,3 +109,5 @@ In conclusion, from the analysis of both flights into and out of Austin above, w
 
 In this case, the question we are considering is whether there is a relationship between patient's age and patient's creatine clearance rate. And whether we can develop a linear model based on the past data, which can be used in the future to predict patient's creatine clearance rate.
 
+![Rplot_creatinine](https://user-images.githubusercontent.com/42823507/74471729-5650fb80-4e66-11ea-973e-89e4d7922be7.png)
+
