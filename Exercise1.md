@@ -40,6 +40,7 @@ For the flight out of Austin:
  <img width="271" alt="Screen Shot 2020-02-13 at 1 44 17 PM" src="https://user-images.githubusercontent.com/42823507/74472077-f3139900-4e66-11ea-9a07-e2a81cdc807b.png">
 
 From the data, we can see that the average departure delay time on Wednesday and Saturday are lowest. In addition, they also have the lowest standard deviation, which indicates the number has low fluctuation.
+
 <img width="273" alt="Screen Shot 2020-02-13 at 1 45 08 PM" src="https://user-images.githubusercontent.com/42823507/74472148-12122b00-4e67-11ea-999c-4f4ed8d66ca0.png">
 
 From the data, we can see that the average arrival delay time on Wednesday and Saturday are lowest. In addition, they also have the lowest standard deviation, which indicates the number has low fluctuation.
@@ -69,5 +70,10 @@ In conclusion, from the analysis of both flights into and out of Austin above, w
 
 In this case, the question we are considering is whether there is a relationship between patient's age and patient's creatine clearance rate. And whether we can develop a linear model based on the past data, which can be used in the future to predict patient's creatine clearance rate.
 
+Based on the data in the creatinine.csv, we first create a plot of clearance rate vs age, which is shown below:
 ![Rplot_creatinine](https://user-images.githubusercontent.com/42823507/74471729-5650fb80-4e66-11ea-973e-89e4d7922be7.png)
+
+From the plot, we can see there is a linear relationship between clearance rate and age, and the next step is to develop a fitted equation based on the data, which can be used in the future to preditct clearance rate from age.
+Based on the past data, R helps to develop the following fitted equation: clearance rate = 147.81 - 0.62 * age
+<img width="301" alt="Screen Shot 2020-02-13 at 1 52 05 PM" src="https://user-images.githubusercontent.com/42823507/74472773-125ef600-4e68-11ea-98f7-41c51d33502a.png">
 
