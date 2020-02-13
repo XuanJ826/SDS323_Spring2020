@@ -105,14 +105,16 @@ Besides these four variables, we need to consider other 19 variables one by one 
  <img width="403" alt="Screen Shot 2020-02-13 at 5 15 05 PM" src="https://user-images.githubusercontent.com/42823507/74487166-6d064b00-4e84-11ea-9618-4dac56c3a1c7.png">
  - age: the age influence the rent in a negative way based on the plot, since our building is new, we can control it to be less than 34, which is the median building age in the data set.
  ![Rplot02](https://user-images.githubusercontent.com/42823507/74487286-b191e680-4e84-11ea-9cad-1ab5a26914c5.png)
-- renovated: we would not control this factor since we set the age to be lower than 34, which is comparatively new building
-- class a/class b: we would set the building to be either a or b class since it represents the average quality.
-- LEED/Energy star: since these two variables are categories of the green_rating, we would not control them in this case.
-- amenities: By looking at the map, the amenities is 1 in the planning region; thus, we control this as amenities == 1.
-- cd/hd/total.dd: we would not control these three factor in this case as they influence the rent in a neglected way.
-- Percipitation: we would control this to the middle 50% range based on the Austin's precipitation rate.
-- Cluster rent: regional rent rate has huge influence in the rent based on the plot, which positively influence the rent. Based on the East Austin(zip code:78702)'s median rent rate, it is included in top 25% of national median rent rate. Thus, we control it in the top25% range in this case. 
-![Rplot03](https://user-images.githubusercontent.com/42823507/74487727-e05c8c80-4e85-11ea-956f-e064f57e5bbd.png)
+ - renovated: we would not control this factor since we set the age to be lower than 34, which is comparatively new building
+ - class a/class b: we would set the building to be either a or b class since it represents the average quality.
+ - LEED/Energy star: since these two variables are categories of the green_rating, we would not control them in this case.
+ - amenities: By looking at the map, the amenities is 1 in the planning region; thus, we control this as amenities == 1.
+ - cd/hd/total.dd: we would not control these three factor in this case as they influence the rent in a neglected way.
+ - Percipitation: we would control this to the middle 50% range based on the Austin's precipitation rate.
+ - Cluster rent: regional rent rate has huge influence in the rent based on the plot, which positively influence the rent. 
+ Based on the East Austin(zip code:78702)'s median rent rate, it is included in top 25% of national median rent rate. Thus, we control it in the top25% range in this case. 
+
+ ![Rplot03](https://user-images.githubusercontent.com/42823507/74487727-e05c8c80-4e85-11ea-956f-e064f57e5bbd.png)
 
 After controlling all variables, we get the following dataset:
 <img width="1405" alt="Screen Shot 2020-02-13 at 5 28 56 PM" src="https://user-images.githubusercontent.com/42823507/74487917-5c56d480-4e86-11ea-8af0-32c1675cbc78.png">
