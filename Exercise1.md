@@ -36,27 +36,11 @@ Besides these two variables, we need to consider other 15 variables on which var
 Best Day of the Week:
 
 For the flight out of Austin:
- 
- DayOfWeek       MEAN   MIN   MAX   SD
- 1               9.46   -19   442  31.2
- 2               7.21   -20   413  29.4
- 3             # 6.38   -19   353  27.0
- 4               8.46   -19   412  28.9
- 5               10.6    -22   483  31.1
- 6             # 6.46   -20   405  27.6
- 7               9.53   -22   382  30.8
+ <img width="271" alt="Screen Shot 2020-02-13 at 1 44 17 PM" src="https://user-images.githubusercontent.com/42823507/74472077-f3139900-4e66-11ea-9a07-e2a81cdc807b.png">
 
 From the data, we can see that the average departure delay time on Wednesday and Saturday are lowest. In addition, they also have the lowest standard deviation, which indicates the number has low fluctuation.
+<img width="273" alt="Screen Shot 2020-02-13 at 1 45 08 PM" src="https://user-images.githubusercontent.com/42823507/74472148-12122b00-4e67-11ea-999c-4f4ed8d66ca0.png">
 
-For the flight into Austin:
- DayOfWeek MEAN   MIN   MAX   SD
- 1         7.04   -38   425  32.2
- 2         4.82   -40   414  30.8
- 3       # 3.72   -58   352  28.5
- 4         6.24   -40   394  30.2
- 5         8.29   -37   466  32.0
- 6       # 3.10   -43   399  29.5
- 7         6.49   -37   362  31.8
 From the data, we can see that the average arrival delay time on Wednesday and Saturday are lowest. In addition, they also have the lowest standard deviation, which indicates the number has low fluctuation.
 
 Therefore, we can conclude that the best day in a week to minimize the delays is Wednesday and Saturday.
