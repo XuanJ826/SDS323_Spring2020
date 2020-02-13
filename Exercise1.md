@@ -5,7 +5,7 @@
 
 Considering the flights into and out of Austin, I am interested in what is the best day in a week and the best month in a year to fly to minimize delays. Therefore, I need to develop two models to answer these two questions. The two independent variables are DayOfWeek and Month separately. Based on the flights in and out of Austin, the dependent variable for into Austin is ArrDelay, while the dependent variable for out of Austin is DepDelay.
 
-Besides these two variables, we need to consider other 15 variables on which variables to ignore and which variables to control:
+Besides these four variables, we need to consider other 15 variables on which variables to ignore and which variables to control:
 
  - Year all 2008: since the data are all from 2008, this variable can be ignored in this case.
  
