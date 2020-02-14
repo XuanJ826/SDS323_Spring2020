@@ -152,8 +152,8 @@ The equation is: log(Q) = 4.72 - 1.62log(P), and K = e^4.72 = 110, E = -1.62 bas
 
 <img width="380" alt="Screen Shot 2020-02-13 at 5 46 33 PM" src="https://user-images.githubusercontent.com/42823507/74488787-e738ce80-4e88-11ea-8d03-42cbee3db8ca.png">
 
-Therefore, we know that Q = 110*P^-1.62, AND N = (110*P^-1.62)(P-C). Using the calculus, we know that when P = 
+Therefore, we know that Q = 110*P^-1.62, AND N = (110*P^-1.62)(P-C). Using the calculus dN/dP = 0, we know that when P = 2.61C, WHICH IS THE PROFIT-MAXMIZING PRICE.
 
-In the case when c=1, we can check the plot in R to know that the profit-maxmizing price is about 2.62
+In the case when c=1, we can check the plot in R to know that the profit-maxmizing price is about 2.61
 
 ![Rplot06](https://user-images.githubusercontent.com/42823507/74488992-8231a880-4e89-11ea-8729-90110083bc95.png)
