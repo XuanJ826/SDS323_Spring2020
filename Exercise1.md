@@ -145,7 +145,7 @@ In order to derive the function used to maxmize the profit, we need to set up so
  - P - price per unit
  - C - cost per unit
 
-Since the net profit is the total revenue minus total cost, we can get the equation: N = Q (P-C). 
+Since the net profit is the total revenue minus total cost (Net Profot = Total Revenue - Total Cost = Q*P - Q*C), we can get the equation: N = Q (P-C). 
 Meanwhile, we know that Q is determined by customer, while the P is determined by store.
 
 So the question is for what price the store should set to maximize the net profit. To get the result, we need first consider how Q and P is related. And the plot between two is shown below:
