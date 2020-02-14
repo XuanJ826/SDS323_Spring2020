@@ -16,6 +16,7 @@ Besides these four variables, we need to consider other 15 variables on which va
  - UniqueCarrier/FlightNum/TailNum: In this analysis, we consider the delay time regardless of carrier information, so we ignore these three variables related to airline carrier.
  
  - ActualElapsedTime: The elapsed time is related to the air time, which may influence the delay time, so we will use the middle 50% of data which is the range between 57 and 164.
+    
     <img width="406" alt="Screen Shot 2020-02-13 at 1 43 03 PM" src="https://user-images.githubusercontent.com/42823507/74471984-c8c1db80-4e66-11ea-8478-2a8461fc6aa3.png">
  
  - CRSElapsedTime: Since we have controlled the ActualElapsedTime, this variable will be ignored.
@@ -25,6 +26,7 @@ Besides these four variables, we need to consider other 15 variables on which va
  - Origin/Dest: In this analysis, we only consider the relationship between time and delay time, so we would ignore the origin and destination factors.
  
  - Distance: Distance is another important factor that might influence the delay time, so we would control this factor to the middle 50% range which is between 190 and 1085.
+    
     <img width="440" alt="Screen Shot 2020-02-13 at 1 42 02 PM" src="https://user-images.githubusercontent.com/42823507/74471912-a4fe9580-4e66-11ea-9b0e-142f24bf4634.png">
  
  - Cancelled: since the delay time is only related to scheduled flight, cancelled flight is not included. We need to filter the data to Cancelled==1 to clean the data.
@@ -71,25 +73,30 @@ In conclusion, from the analysis of both flights into and out of Austin above, w
 In this case, the question we are considering is whether there is a relationship between patient's age and patient's creatine clearance rate. And whether we can develop a linear model based on the past data, which can be used in the future to predict patient's creatine clearance rate.
 
 Based on the data in the creatinine.csv, we first create a plot of clearance rate vs age, which is shown below:
+
 ![Rplot_creatinine](https://user-images.githubusercontent.com/42823507/74471729-5650fb80-4e66-11ea-973e-89e4d7922be7.png)
 
 From the plot, we can see there is a linear relationship between clearance rate and age, and the next step is to develop a fitted equation based on the data, which can be used in the future to preditct clearance rate from age.
 Based on the past data, R helps to develop the following fitted equation: clearance rate = 147.81 - 0.62 * age
+
 <img width="301" alt="Screen Shot 2020-02-13 at 1 52 05 PM" src="https://user-images.githubusercontent.com/42823507/74472773-125ef600-4e68-11ea-98f7-41c51d33502a.png">
 
 Therefore, we can use this model to predict patients' clearance rate based on their ages.
  - For a 55-year-old, we expect the creatinine clearance rate should be, on average, 113.72 mL/minute.
+
 <img width="267" alt="Screen Shot 2020-02-13 at 1 55 53 PM" src="https://user-images.githubusercontent.com/42823507/74473059-94e7b580-4e68-11ea-976f-8f881b78291a.png">
 
  - The model also indicates that we expected that the clearance rate will decrease, on average, 0.62 mL/minute, if the age increase by 1 year.
  
  - Based on the model: For a 40-year-old, we expect the creatinine clearance rate should be, on average, 123.02 mL/minute; while for a 60-year-old, we expect the creatinine clearance rate should be, on average, 110.62 mL/minute. Therefore, the 40-year-old patient (135 mL/min) is 11.98 mL/minute (9.74%) above average, while the 60-year-old patient (112 mL/min) is 1.38 mL/minute (1.25%) above average. Because the clearance rate is the higher, the better, we can conclude that the 40-year-old patient is healther.
- <img width="309" alt="Screen Shot 2020-02-13 at 1 58 44 PM" src="https://user-images.githubusercontent.com/42823507/74473318-07f12c00-4e69-11ea-8949-b96347ac6251.png">
+
+<img width="309" alt="Screen Shot 2020-02-13 at 1 58 44 PM" src="https://user-images.githubusercontent.com/42823507/74473318-07f12c00-4e69-11ea-8949-b96347ac6251.png">
 
 
 ## Green Buildings
 
 In this case, besides the recommendations from developer, there are many factors needed to be controled. Based on the data set in greenbuildings.csv, we can see that the data for green buildings is small compared to the data for non-green buildings.This may lead to biased conclustion from the analysis.
+
 ![Rplot](https://user-images.githubusercontent.com/42823507/74485987-a093a600-4e81-11ea-921d-ed56a23b14e0.png)
 
 There are in total 23 variables from the data set. Rent, gas costs and electricity costs are three major dependent variables we need to analyze to see whether investing a green building is worthy in the long term. Green_rating is our independent variable that we used to compare the revenue and cost between green and non-green buildings.
@@ -98,10 +105,13 @@ Besides these four variables, we need to consider other 19 variables one by one 
  - CS. Property ID: this variable will be ignored since it is just a primary ID.
  - cluster: this variable is an identifier for the building cluster, which is unrelated to our analysis.
  - size: The size factor would not be controlled in this case because based on the graph, there is no relationship between size and rent.
+ 
  ![Rplot01](https://user-images.githubusercontent.com/42823507/74486469-a2119e00-4e82-11ea-9f47-3985f968fb12.png)
+ 
  - empl_gr: we will set it to be top 25% since the Austin's y-o-y employment growth rate ranks the 2nd in last year.
  - leasing rate: there are some outliers in occupancy rate; thus, we need to remove these outliers in our analysis
  - stories: since we plan to build a 15 stories building, we can set the range from 10 to 19, which is the range between median and 75th percentile
+ 
  <img width="403" alt="Screen Shot 2020-02-13 at 5 15 05 PM" src="https://user-images.githubusercontent.com/42823507/74487166-6d064b00-4e84-11ea-9618-4dac56c3a1c7.png">
  
  - age: the age influence the rent in a negative way based on the plot, since our building is new, we can control it to be less than 34, which is the median building age in the data set.
@@ -120,6 +130,7 @@ Besides these four variables, we need to consider other 19 variables one by one 
  ![Rplot03](https://user-images.githubusercontent.com/42823507/74487727-e05c8c80-4e85-11ea-956f-e064f57e5bbd.png)
 
 After controlling all variables, we get the following dataset:
+
 <img width="1405" alt="Screen Shot 2020-02-13 at 5 28 56 PM" src="https://user-images.githubusercontent.com/42823507/74487917-5c56d480-4e86-11ea-8af0-32c1675cbc78.png">
 
 This data set shows us that it is not economic to invest in the green building because the average and median rent rates of green buildings are both lower than those of non-green buildings. Besides, the gas and electricity costs are the same. Therefore, in the long-run, it might earn higher profit by building a non-green building in consideration of high implementation cost with low revenue.
